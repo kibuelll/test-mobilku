@@ -1,0 +1,32 @@
+{
+  "name": "test-mobilku",
+  "version": "1.0.0",
+  "description": "mobilku-test-api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kibuelll/test-mobilku.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kibuelll/test-mobilku/issues"
+  },
+  "homepage": "https://github.com/kibuelll/test-mobilku#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "pg": "^8.10.0",
+    "sequelize": "^6.30.0",
+    "sharp": "^0.32.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.22",
+    "sequelize-cli": "^6.6.0"
+  }
+}
