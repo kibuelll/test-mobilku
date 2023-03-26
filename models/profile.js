@@ -5,7 +5,7 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Profile extends Model {
     static associate(models) {
-      // define association here
+      Profile.hasOne(models.PictureProfile)
     }
   }
   Profile.init({

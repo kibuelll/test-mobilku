@@ -2,33 +2,27 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Profiles', {
+    await queryInterface.createTable('PictureProfiles', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
+      ProfileId : {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Profiles',
+          key:'id'
+        },
+        onDelete : 'cascade',
+        onUpdate : 'cascade'
       },
-      age: {
-        type: Sequelize.INTEGER
+      source500: {
+        type: Sequelize.TEXT
       },
-      birthDate: {
-        type: Sequelize.DATE
-      },
-      phone: {
-        type: Sequelize.STRING
-      },
-      cityOrigin: {
-        type: Sequelize.STRING
-      },
-      highestEducation: {
-        type: Sequelize.STRING
-      },
-      picture : {
-        type: Sequelize.STRING
+      source1000: {
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
@@ -41,6 +35,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Profiles');
+    await queryInterface.dropTable('PictureProfiles');
   }
 };
