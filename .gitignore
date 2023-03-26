@@ -1,3 +1,4 @@
 node_modules
 test-mobilku.pem
 test-mobilku-firebase-adminsdk-g8n8i-8633b8f44f.json
+.env
